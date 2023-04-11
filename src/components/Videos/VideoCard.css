@@ -1,0 +1,30 @@
+.VideoCard{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+}
+.VideoCard a img{
+    width: 250px;
+    border-radius: 10px;
+}
+.VideoCard .heading{
+    display: flex;
+    margin-top: 5px;
+}
+.VideoCard .subHeading{
+    margin-left: 10px;
+}
+.VideoCard .subHeading h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+.VideoCard .subHeading h5,p{
+    color: rgb(78, 78, 78);
+    font-weight: 500;
+    font-size: 13px;
+}
+.VideoCard .heading img{
+    height: 30px;
+    width: 30px;
+}

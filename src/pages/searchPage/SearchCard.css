@@ -1,0 +1,55 @@
+.SearchCard{
+    display: flex;
+    position: relative;
+    min-height: 20vh;
+    width: 100%;
+    margin: 15px;
+    justify-content: baseline;
+}
+.SearchCard a img{
+    min-height: 20vh;
+    max-width: 35vh;
+    border-radius: 10px;
+}
+.SearchCard .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.SearchCard .heading h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.SearchCard .heading p{
+    padding: 5px 0 10px 0;
+}
+.SearchCard .subHeading{
+    display: flex;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.SearchCard .subHeading h5{
+    font-weight: 600;
+}
+.SearchCard .subHeading img{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+@media screen and (max-width:700px) {
+    .SearchCard .heading{
+        transform: scale(0.9);
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width:600px) {
+    .SearchCard{
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%; 
+    }
+    .SearchCard a img{
+        max-height: 2vh;
+        min-width: 60vw;
+    }
+}

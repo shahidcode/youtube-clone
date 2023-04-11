@@ -1,0 +1,23 @@
+.videos_section{
+    display: flex;
+    flex-direction: column;
+    flex: 0.85;
+    padding: 10px;
+    align-items: center;
+}
+.recommendVideos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.placeImg{
+    position: relative;
+    height: 55vh;
+    width: 80vw;
+}
+.placeImg img{
+    position: absolute;
+    height: 55vh;
+    width: 80vw;
+    object-fit: cover;
+}

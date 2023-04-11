@@ -1,0 +1,10 @@
+.search_section{
+    flex: 0.85;
+    padding: 10px;
+    align-items: center;
+}
+.search_videos{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}

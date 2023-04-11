@@ -1,0 +1,45 @@
+.main{
+    display: flex;
+}
+.SidebarRows{
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    margin: 10px 0 10px 0;
+}
+a{
+    color: inherit;     /* takes property form parent element */
+    text-decoration: inherit;
+}
+.SidebarRows h2{
+    flex: 1;
+    margin: 0 10px 0 20px;
+    font-size: 1.8vh;
+    font-weight: 500; 
+    padding: 5px 0 5px 0;
+}
+.SidebarRows .styleIcon{
+    font-size: 20px;
+    color: #606060;
+}
+.SidebarRows:hover{
+    cursor: pointer;
+}
+.SidebarRows:hover > .styleIcon{    /* changing color of icons when hovered */
+    color: red;
+}
+
+@media screen and (max-width:936px) {
+    .main{
+        flex:0.1;
+    }
+    .Sidebar h3{    /* from SidebarRow.css */
+        display: none;
+    }
+    .SidebarRows h2{
+        display: none;
+    }
+    .SidebarRows .styleIcon{
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,64 @@
+.watch_section{
+    display: flex;
+    flex: 0.85;
+    padding: 10px;
+    overflow: hidden;
+}
+.player{
+    flex:0.6;
+}
+.suggested_videos{
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+}
+.watch_section .reactPlayer{
+    min-height: 50vh;
+    min-width: 50vw;
+}
+.player h3{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.watch_section .player .playerDetails{
+    margin-top: 10px;
+    display: flex;
+}
+.watch_section .player .playerDetails .channelDetails{
+    margin-left: 10px;
+    margin-right: auto;
+}
+.playerDetails button{
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+}
+.playerDetails button:hover{
+    transform: scale(1.1);
+}
+
+.playerDetails + p{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:1300px) {
+    .watch_section .reactPlayer{
+        min-height: 40vh;
+        max-width: 35vw;
+    }
+}
+@media screen and (max-width:970px) {
+    .watch_section{
+        flex: 1;
+    }
+}
+@media screen and (max-width:786px) {
+    .watch_section{
+        flex-direction: column;
+    }
+    .watch_section .reactPlayer{
+        min-height: 40vh;
+        max-width: 100vw;
+    }
+}

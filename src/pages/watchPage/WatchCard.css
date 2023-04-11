@@ -1,0 +1,80 @@
+.WatchCard{
+    display: flex;
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    margin: 0 0 15px 20px;
+}
+.WatchCard a img{
+    height: 15vh;
+    width: 15vw;
+    border-radius: 10px;
+}
+.WatchCard .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.WatchCard .heading h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+.WatchCard .heading p{
+    padding: 5px 0 10px 0;
+}
+.WatchCard .subHeading{
+    display: flex;
+    align-items: center;
+}
+.WatchCard .subHeading img{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width:1300px) {
+    .WatchCard {
+        margin: 0 0 15px 5px;
+        transform: scale(.9);
+    }
+    .WatchCard .heading h3{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:1100px) {
+    .WatchCard {
+        margin: 0 0 15px 5px;
+        transform: scale(.8);
+    }
+    .WatchCard .heading h3{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:786px) {
+    .WatchCard {
+        margin: 0 0 15px 0;
+        transform: scale(.8);
+    }
+    .WatchCard .heading h3{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+    .WatchCard {
+        width: 100vw;
+    }
+    .WatchCard .heading h3{
+        font-size: 12px;
+    }   
+    .WatchCard .subHeading h5{
+        font-size: 12px;
+    }
+    .WatchCard .heading p{
+        font-size: 12px;
+    }
+    .WatchCard img{
+        height: 15vh;
+        width: 40vw;
+        border-radius: 10px;
+    }
+}

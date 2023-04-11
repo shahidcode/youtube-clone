@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    width: 100%;
+    overflow-x: hidden;
+}
+.App_bottom{
+    display: flex;
+    padding-top: 1vh;
+    min-height: 100vh;
+}
+/* Dark Mode */
+#Dark *{
+    background-color: #1c1c1c;
+}
+#Dark{
+    color: white;
+}
+#Dark .searchDiv svg{
+    color: white;
+}
+#Dark p{
+    color: darkgray;
+}
+#Dark .searchDiv input[type="text"]{
+    color: white;
+}
+#Dark .App_bottom .main .Sidebar a:hover{
+    color: rgb(236, 4, 4);
+}
+
+#Dark .loginPage form{
+    background: #1c1c1c;
+    box-shadow:  5px 5px 10px #0b0b0b,
+             -5px -5px 10px #2d2d2d;
+}
+#Dark form input{
+    color: rgb(219, 219, 219);
+}
+#Dark .loginPage .styleDiv1{
+    background: #1c1c1c;
+    box-shadow:  5px 5px 10px #0b0b0b,
+                 -5px -5px 10px #2d2d2d;
+}
+#Dark .loginPage button{
+    background: #1c1c1c;
+    box-shadow:  5px 5px 10px #141414,
+    -5px -5px 10px #242424;
+    color: rgb(219, 219, 219);
+}
