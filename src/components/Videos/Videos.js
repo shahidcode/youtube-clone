@@ -30,7 +30,7 @@ function Videos(){
     useEffect( ()=>{
         setLoading(true)
         setTimeout(()=>{
-            VideoApi(`search/?q=${category}`).then( (data)=> setVideoList( data.contents )  )    //contents coming from api
+            // VideoApi(`search/?q=${category}`).then( (data)=> setVideoList( data.contents )  )    //contents coming from api
             setLoading(false)
         },2000)
     } , [category])

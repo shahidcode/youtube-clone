@@ -1,22 +1,31 @@
 import './Search.css'
 import { useParams } from 'react-router-dom'
-import {useEffect,useState} from 'react'
+import {useEffect,useState, useContext} from 'react'
 import LocalApi from '../../apis/LocalApi'
 import {VideoApi} from '../../apis/VideoApi'
 import SearchCard from './SearchCard'
 import ChannelCard from '../../components/Videos/ChannelCard'
+import { Loader } from '../../contexts/LoadContext'
+import { SyncLoader } from 'react-spinners'
 
 function Search(){
 
     const {id} = useParams()
     const [searchResults,setSearchResults] = useState([]);
+    const {loading,setLoading} = useContext(Loader);
+
     useEffect( ()=>{
-        VideoApi(`search/?q=${id}`).then( (res) => setSearchResults(res.contents) )
-        // console.log(searchResults)
+        setLoading(true)
+        setTimeout(()=>{
+            // VideoApi(`search/?q=${id}`).then( (res) => setSearchResults(res.contents) )
+            setLoading(false)
+        },2000)
+
     } ,[id])
 
     return(
         <div className='search_section'>
+            {loading ? <SyncLoader color='red' style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}/> :
             <div className='search_videos'>
                 {
                     searchResults.map( (item,index)=>
@@ -43,6 +52,7 @@ function Search(){
                     )
                 }
             </div>
+            }
         </div>
     )
 }
