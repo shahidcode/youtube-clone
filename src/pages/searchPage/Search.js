@@ -17,7 +17,7 @@ function Search(){
     useEffect( ()=>{
         setLoading(true)
         setTimeout(()=>{
-            // VideoApi(`search/?q=${id}`).then( (res) => setSearchResults(res.contents) )
+            VideoApi(`search/?q=${id}`).then( (res) => setSearchResults(res.contents) )
             setLoading(false)
         },2000)
 
@@ -25,9 +25,9 @@ function Search(){
 
     return(
         <div className='search_section'>
-            {loading ? <SyncLoader color='red' style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}/> :
+            {
             <div className='search_videos'>
-                {
+                { loading ? <SyncLoader color='red' style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}/> :
                     searchResults.map( (item,index)=>
                     item.type === 'video' ?
                         <SearchCard Thumbnail={item.video.thumbnails[0].url}

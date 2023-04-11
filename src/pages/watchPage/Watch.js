@@ -22,8 +22,8 @@ function Watch(){
     const [isSub,setSub] = useState(false)
 
     useEffect( ()=>{
-        // fetchVideoDetails()
-        // fetchRelatedDetails()
+        fetchVideoDetails()
+        fetchRelatedDetails()
         setIsLiked(false)
         setSub(false)
         likeRef.current.style.color = 'black'
