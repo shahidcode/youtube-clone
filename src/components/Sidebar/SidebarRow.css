@@ -8,7 +8,7 @@
     margin: 10px 0 10px 0;
 }
 a{
-    color: inherit;     /* takes property form parent element */
+    color: inherit;     
     text-decoration: inherit;
 }
 .SidebarRows h2{
@@ -25,7 +25,7 @@ a{
 .SidebarRows:hover{
     cursor: pointer;
 }
-.SidebarRows:hover > .styleIcon{    /* changing color of icons when hovered */
+.SidebarRows:hover > .styleIcon{    
     color: red;
 }
 
