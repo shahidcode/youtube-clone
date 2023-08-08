@@ -34,7 +34,7 @@ function Watch(){
     const fetchRelatedDetails = ()=> VideoRelated(`?id=${id}`).then( (res)=> setWatch(res.contents) )
 
     function handleLike(){
-        if(!isLiked){   //if video is already liked don't push it again into array
+        if(!isLiked){  
             setIsLiked(!isLiked)
             likeRef.current.style.color = 'red';
             addDocuments(
