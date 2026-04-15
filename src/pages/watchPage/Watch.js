@@ -59,25 +59,27 @@ function Watch(){
     }
 
     //subscribe functionality
-    function handleSub(){
-        if(!isSub){  
-            setSub(!isSub)
-            subRef.current.style.color = 'red';
-            addDocuments(
-                {
-                    ChannelLogo : temp?.author?.avatar[0]?.url,
-                    ChannelName : temp?.author?.title,
-                    Username : temp?.author?.canonicalBaseUrl,
-                    Subscribers : temp?.author?.stats?.subscribersText,
-                    Description : temp?.description,
-                    ID : temp?.author?.channelId       
-            },temp?.author.channelId,'sub')
-            }
-        else{
-            setSub(!isSub)
-            subRef.current.style.color = 'black';
-         }
-         
+    function handleSub() {
+      if (!isSub) {
+        setSub(true);
+        subRef.current.style.color = 'red';
+    
+        addDocuments(
+          {
+            ChannelLogo: temp?.author?.avatar?.[0]?.url ?? null,
+            ChannelName: temp?.author?.title ?? "Unknown Channel",
+            Username: temp?.author?.canonicalBaseUrl ?? "",
+            Subscribers: temp?.author?.stats?.subscribersText ?? "0 subscribers",
+            Description: temp?.description ?? "",
+            ID: temp?.author?.channelId ?? ""
+          },
+          temp?.author?.channelId,
+          'sub'
+        );
+      } else {
+        setSub(false);
+        subRef.current.style.color = 'black';
+      }
     }
 
 
