@@ -33,27 +33,29 @@ function Watch(){
     const fetchVideoDetails = ()=> VideoDetailApi(`?id=${id}`).then( (data)=> setTemp(data))
     const fetchRelatedDetails = ()=> VideoRelated(`?id=${id}`).then( (res)=> setWatch(res.contents) )
 
-    function handleLike(){
-        if(!isLiked){  
-            setIsLiked(!isLiked)
-            likeRef.current.style.color = 'red';
-            addDocuments(
-                    {
-                        Thumbnail : temp?.thumbnails[0]?.url,
-                        Title : temp?.title,
-                        ChannelName : temp?.author?.title,
-                        ChannelLogo : temp?.author?.avatar[0]?.url,
-                        Views : temp?.stats?.views,
-                        Date : temp?.publishedDate,
-                        Description : temp?.description?.slice(0,200),
-                        ID : temp?.videoId                   
-                },temp?.videoId,'like')
-        }
-        else{
-            setIsLiked(!isLiked)
-            likeRef.current.style.color = 'black';
-        }
-
+    function handleLike() {
+      if (!isLiked) {
+        setIsLiked(true);
+        likeRef.current.style.color = 'red';
+    
+        addDocuments(
+          {
+            Thumbnail: temp?.thumbnails?.[0]?.url ?? null,
+            Title: temp?.title ?? "",
+            ChannelName: temp?.author?.title ?? "",
+            ChannelLogo: temp?.author?.avatar?.[0]?.url ?? null,
+            Views: temp?.stats?.views ?? 0,
+            Date: temp?.publishedDate ?? "",
+            Description: temp?.description?.slice(0, 200) ?? "",
+            ID: temp?.videoId ?? ""
+          },
+          temp?.videoId,
+          'like'
+        );
+      } else {
+        setIsLiked(false);
+        likeRef.current.style.color = 'black';
+      }
     }
 
     //subscribe functionality
