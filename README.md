@@ -5,6 +5,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `Tech Stack`
 React, Firebase, Material-UI
 
+### `App Preview`
+<img width="1455" height="831" alt="Screenshot 2026-04-19 at 1 28 52 PM" src="https://github.com/user-attachments/assets/1c16ffca-4945-4016-bb27-012eccd9d26f" />
+
+
 ## Available Scripts
 
 In the project directory, you can run:
